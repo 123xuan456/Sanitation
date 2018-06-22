@@ -1,0 +1,83 @@
+apply plugin: 'com.android.application'
+apply plugin: 'android-apt'
+repositories {
+    flatDir {
+        dir 'libs'
+    }
+}
+android {
+    compileSdkVersion 26
+    buildToolsVersion "26.0.2"
+
+    useLibrary 'org.apache.http.legacy'
+    defaultConfig {
+        applicationId "com.reeching.sanitation"
+        minSdkVersion 15
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+    }
+    /**
+     * 配置签名文件
+     */
+    signingConfigs {
+        davidConfig {
+            storeFile file('J:/Work/Sanitation/jks.jks')
+            storePassword 'reeching'
+            keyAlias 'key'
+            keyPassword 'reeching'
+
+        }
+    }
+    /**
+     * 设置生成apk文件 一定要在signingConfigs下面
+     */
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.davidConfig
+        }
+
+        debug {
+            signingConfig signingConfigs.davidConfig
+        }
+    }
+    sourceSets {
+        main {
+            jniLibs.srcDir 'libs'
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+//rxjava冲突：在app build.gradle下添加
+//packagingOptions {
+//    exclude 'META-INF/rxjava.properties'
+//}
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile files('libs/BaiduLBS_Android.jar')
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'com.android.support:design:26.+'
+    compile 'com.jakewharton:butterknife:7.0.1'
+    compile 'com.flyco.labelview:FlycoLabelView_Lib:1.0.2@aar'
+    compile 'com.github.LuckSiege.PictureSelector:picture_library:v2.1.7'
+    compile 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
+    compile 'com.bigkoo:pickerview:2.0.8'
+    compile 'com.jiangyy:dialog:1.0.2'
+    compile 'com.android.support:support-v4:26.+'
+    compile 'com.google.code.gson:gson:2.3'
+    compile 'com.lzy.net:okgo:3.0.4'
+    compile 'com.google.dagger:dagger:2.0.2'
+    compile 'de.hdodenhof:circleimageview:2.1.0'
+    compile 'com.youth.banner:banner:1.4.5'
+    apt 'com.google.dagger:dagger-compiler:2.0.2'
+    provided 'org.glassfish:javax.annotation:10.0-b28'
+    compile 'com.github.123xuan456:PictureView:v1.0.2'
+}

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:id="@+id/fragment"
+        android:layout_above="@+id/radioGroup">
+
+    </FrameLayout>
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/m_basic_home_rd"
+            style="@style/MTabStyle"
+            android:visibility="gone"
+            android:checked="true"
+            android:text="@string/m_basic_home_rd" />
+
+        <RadioButton
+            android:id="@+id/m_basic_grids_rd"
+            style="@style/MTabStyle"
+            android:checked="true"
+            android:text="@string/m_basic_grids_rd" />
+
+        <RadioButton
+            android:id="@+id/m_basic_guaz_rd"
+            style="@style/MTabStyle"
+            android:text="@string/m_basic_guaz_rd" />
+        <RadioButton
+            android:id="@+id/m_basic_statistics_rd"
+            style="@style/MTabStyle"
+            android:text="@string/m_basic_statistics_rd" />
+
+    </RadioGroup>
+
+</RelativeLayout>
+

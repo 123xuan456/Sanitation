@@ -1,0 +1,808 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/add_StarTv"
+            android:text="编           号 ：" />
+
+        <EditText
+            android:id="@+id/add_num"
+            style="@style/add_Edit1"
+
+            android:inputType="number" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/add_StarTv"
+            android:text="标           号 ：" />
+
+        <EditText
+            android:id="@+id/add_grade"
+            style="@style/add_Edit1"
+            android:inputType="number"
+             />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/add_StarTv"
+            android:text="名           称 ：" />
+
+        <EditText
+            android:id="@+id/add_name"
+            style="@style/add_Edit1"
+             />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/add_StarTv"
+            android:text="公   厕   名  ：" />
+
+        <EditText
+            android:id="@+id/add_name1"
+            style="@style/add_Edit1"
+             />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/ll_add_okey"
+        android:padding="5dp">
+
+        <TextView
+            style="@style/add_StarTv"
+            android:text="基础objectKey：" />
+
+        <TextView
+            android:id="@+id/add_okey"
+            style="@style/add_Spinner"
+             />
+        <!--android:drawableRight="@drawable/icon_down"-->
+        <TextView
+            android:id="@+id/add_okey_tv"
+            style="@style/add_Spinner"
+            android:visibility="gone"
+            />
+
+        <!--<EditText-->
+        <!--android:id="@+id/add_okey"-->
+        <!--style="@style/add_Edit1"-->
+        <!-- />-->
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:visibility="gone"
+        android:orientation="horizontal">
+
+        <TextView
+           style="@style/add_NoStarTv"
+            android:text="所属网格：" />
+
+        <EditText
+            android:id="@+id/add_grids"
+            style="@style/add_Edit1"
+             />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/add_StarTv"
+            android:text="所 属 区 域 ：" />
+
+        <EditText
+            android:id="@+id/add_site"
+            style="@style/add_Edit1"
+             />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:visibility="gone"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/add_StarTv"
+            android:text="管 理 单 位 ：" />
+
+        <EditText
+            android:id="@+id/add_unit"
+            style="@style/add_Edit1"
+             />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:id="@+id/ll_add_company"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/add_StarTv"
+            android:text="作 业 公 司 ：" />
+
+        <Spinner
+            style="@style/add_Spinner"
+            android:id="@+id/add_company"
+            />
+        <TextView
+            style="@style/add_Spinner"
+            android:id="@+id/add_company_tv"
+            android:visibility="gone"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:visibility="gone"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/add_StarTv"
+            android:text="统计分类：" />
+
+        <Spinner
+            style="@style/add_Spinner"
+            android:id="@+id/add_classify"
+            />
+        <!--<EditText-->
+            <!--android:id="@+id/add_classify"-->
+            <!--style="@style/add_Edit1"-->
+            <!-- />-->
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/add_NoStarTv"
+            android:text="检 查 区 域 ：" />
+
+        <EditText
+            android:id="@+id/add_inspection_site"
+            style="@style/add_Edit1"
+             />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/add_StarTv"
+            android:text="种            类：" />
+
+        <Spinner
+            android:id="@+id/add_kind"
+            style="@style/add_Spinner" />
+        <TextView
+            android:id="@+id/add_kind_tv"
+            android:visibility="gone"
+            style="@style/add_Spinner" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/add_StarTv"
+            android:text="分 管 领 导 ：" />
+
+        <TextView
+            android:id="@+id/a"
+            style="@style/add_Edit1"
+             />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/add_StarTv"
+            android:text="所 属 场 队 ：" />
+
+        <TextView
+            android:id="@+id/add_place"
+            style="@style/add_Edit1"
+             />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/add_StarTv"
+            android:text="场队负责人：" />
+
+        <TextView
+            android:id="@+id/add_principal"
+            style="@style/add_Edit1"
+             />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/add_NoStarTv"
+            android:text="所 属 分 队 ：" />
+
+        <TextView
+            android:id="@+id/add_element"
+            style="@style/add_Edit1"
+             />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/add_NoStarTv"
+            android:text="分队负责人：" />
+
+        <TextView
+            android:id="@+id/add_element_principal"
+            style="@style/add_Edit1"
+             />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/add_NoStarTv"
+            android:text="所 属 班 组 ：" />
+
+        <TextView
+            android:id="@+id/add_class"
+            style="@style/add_Edit1"
+             />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/add_NoStarTv"
+            android:text="班组负责人：" />
+
+        <TextView
+            android:id="@+id/add_class_principal"
+            style="@style/add_Edit1"
+             />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/add_StarTv"
+            android:text="产 权 权 属 ：" />
+        <Spinner
+            style="@style/add_Spinner"
+            android:id="@+id/add_1"
+            />
+        <TextView
+            style="@style/add_Spinner"
+            android:visibility="gone"
+            android:id="@+id/add_1_tv"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/add_StarTv"
+            android:text="公 厕 类 别 ：" />
+        <Spinner
+            style="@style/add_Spinner"
+            android:id="@+id/add_wcClassify"
+            />
+        <TextView
+            style="@style/add_Spinner"
+            android:visibility="gone"
+            android:id="@+id/add_wcClassify_tv"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/add_StarTv"
+            android:text="公 厕 等 级 ：" />
+        <Spinner
+            style="@style/add_Spinner"
+            android:id="@+id/add_wcClass"
+            />
+        <TextView
+            style="@style/add_Spinner"
+            android:id="@+id/add_wcClass_tv"
+            android:visibility="gone"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:visibility="gone"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/add_StarTv"
+            android:text="冲 洗 方 式 ：" />
+        <Spinner
+            style="@style/add_Spinner"
+            android:id="@+id/add_way"
+            />
+        <TextView
+            style="@style/add_Spinner"
+            android:id="@+id/add_way_tv"
+            android:visibility="gone"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/add_NoStarTv"
+            android:text="男 蹲 位 数 ：" />
+
+        <EditText
+            android:id="@+id/add_mancount"
+            style="@style/add_Edit1"
+             />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/add_NoStarTv"
+            android:text="女 蹲 位 数 ：" />
+
+        <EditText
+            android:id="@+id/add_womancount"
+            style="@style/add_Edit1"
+             />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/add_NoStarTv"
+            android:text="残疾蹲位数：" />
+
+        <EditText
+            android:id="@+id/add_count"
+            style="@style/add_Edit1"
+             />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/add_NoStarTv"
+            android:text="站 位 合 计 ：" />
+
+        <EditText
+            android:id="@+id/add_counts"
+            style="@style/add_Edit1"
+             />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/add_StarTv"
+            android:text="障 碍 设 施 ：" />
+        <Spinner
+            style="@style/add_Spinner"
+            android:id="@+id/add_2"
+            />
+        <TextView
+            android:id="@+id/add_2_tv"
+            android:visibility="gone"
+            style="@style/add_Edit1"
+             />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:visibility="gone"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/add_StarTv"
+            android:text="粪便处理方式：" />
+        <Spinner
+            style="@style/add_Spinner"
+            android:id="@+id/add_3"
+            />
+        <TextView
+            android:id="@+id/add_3_tv"
+            android:visibility="gone"
+            style="@style/add_Edit1"
+             />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/add_StarTv"
+            android:text="管 理 形 式 ：" />
+        <Spinner
+            style="@style/add_Spinner"
+            android:id="@+id/add_4"
+            />
+        <TextView
+            android:id="@+id/add_4_tv"
+            style="@style/add_Edit1"
+            android:visibility="gone"
+             />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/add_StarTv"
+            android:text="区           域 ：" />
+        <Spinner
+            style="@style/add_Spinner"
+            android:id="@+id/add_area"
+            />
+        <TextView
+            android:id="@+id/add_area_tv"
+            style="@style/add_Edit1"
+            android:visibility="gone"
+             />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/add_StarTv"
+            android:text="审 核 操 作 ：" />
+
+        <Spinner
+            style="@style/add_Spinner"
+            android:id="@+id/add_operation"
+            />
+        <TextView
+            style="@style/add_Spinner"
+            android:id="@+id/add_operation_tv"
+            android:visibility="gone"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/add_NoStarTv"
+            android:text="管理员人数：" />
+
+        <EditText
+            android:id="@+id/add_5"
+            style="@style/add_Edit1"
+             />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/add_NoStarTv"
+            android:text="建 筑 面 积 ：" />
+
+        <EditText
+            android:id="@+id/add_6"
+            style="@style/add_Edit1"
+             />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:visibility="gone"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/add_StarTv"
+            android:text="接 入 时 间 ：" />
+
+        <EditText
+            android:id="@+id/add_7"
+            style="@style/add_Edit1"
+             />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/add_NoStarTv"
+            android:text="运 行 情 况 ：" />
+
+        <EditText
+            android:id="@+id/add_8"
+            style="@style/add_Edit1"
+             />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:visibility="gone"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/add_NoStarTv"
+            android:text="开关门时间：" />
+
+        <EditText
+            android:id="@+id/add_9"
+            style="@style/add_Edit1"
+             />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:visibility="gone"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/add_NoStarTv"
+            android:text="提 交 时 间 ：" />
+
+        <!--<com.bigkoo.pickerview.lib.WheelView-->
+            <!--android:id="@+id/main_wheel_view"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_centerInParent="true" />-->
+
+        <TextView
+            android:id="@+id/add_10"
+            style="@style/add_Edit1"
+             />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/add_NoStarTv"
+            android:text="自           查 ：" />
+
+        <EditText
+            android:id="@+id/add_11"
+            style="@style/add_Edit1"
+             />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/add_StarTv"
+            android:text="所 属 街 乡 ：" />
+
+        <TextView
+            android:id="@+id/add_12"
+            style="@style/add_Edit1"
+             />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/add_StarTv"
+            android:text="所 属 社 区 ：" />
+        <TextView
+            android:id="@+id/add_13"
+            style="@style/add_Edit1"
+             />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/add_NoStarTv"
+            android:text="数 据 来 源 ：" />
+
+        <EditText
+            android:id="@+id/add_14"
+            style="@style/add_Edit"
+             />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/add_NoStarTv"
+            android:text="备 注 信 息 ：" />
+
+        <EditText
+            android:id="@+id/add_note"
+            style="@style/add_Edit"
+             />
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        >
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:overScrollMode="never"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_toRightOf="@+id/textView9"
+            android:layout_toEndOf="@+id/textView9" />
+        <ImageView
+            android:id="@+id/recycler_iv"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:visibility="gone"
+
+            android:layout_toRightOf="@+id/textView9"
+            android:layout_toEndOf="@+id/textView9" />
+        <!--android:src="@drawable/nothing"-->
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:text="公厕铭牌照片：" />
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/textView1"
+            android:layout_toRightOf="@+id/textView1"
+            android:overScrollMode="never" />
+
+        <com.reeching.sanitation.app.view.MyGridView
+            android:id="@+id/recycler1_iv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_toEndOf="@+id/textView1"
+            android:layout_toRightOf="@+id/textView1"
+            android:columnWidth="90dp"
+            android:visibility="gone"
+            android:gravity="center"
+            android:numColumns="auto_fit"
+            android:layout_alignParentTop="true" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:text="公厕周围照片：" />
+
+    </RelativeLayout>
+</LinearLayout>

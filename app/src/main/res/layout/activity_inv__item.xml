@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.reeching.sanitation.app.ui.activity.Inv_ItemActivity">
+    <include
+        android:id="@+id/include"
+        layout="@layout/top_layout"></include>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/linearLayout"
+        android:layout_below="@+id/include">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+            <include
+                android:id="@+id/inv_details_wc"
+                android:visibility="visible"
+                layout="@layout/inc_add_wc"></include>
+
+            <include
+                android:id="@+id/inc_details_road"
+                android:visibility="gone"
+                layout="@layout/inc_add_road"></include>
+
+            <include
+                android:id="@+id/inc_details_waste"
+                android:visibility="gone"
+                layout="@layout/inc_add_waste"></include>
+            <include
+                android:id="@+id/inc_details_people"
+                android:visibility="gone"
+                layout="@layout/inc_add_people"></include>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_alignParentBottom="true"
+    android:id="@+id/linearLayout">
+    <Button
+        android:id="@+id/inv_verified"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="@string/verified"
+        />
+    <Button
+        android:id="@+id/inv_non_approval"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/non_approval"
+        android:layout_weight="1"
+        />
+</LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.reeching.sanitation">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <application
+        android:name=".app.App"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme.NoActionBar">
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="sEeao7GeFR8gy4CFU8Wy9SoWn3K2whw8" />
+
+        <activity android:name=".MainActivity" />
+        <activity android:name=".app.activity.LoginActivity">
+             <intent-filter>
+             <action android:name="android.intent.action.MAIN" />
+
+
+             <category android:name="android.intent.category.LAUNCHER" />
+             </intent-filter>
+        </activity>
+        <activity
+            android:name=".app.activity.MapActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity android:name=".app.activity.AddLeaderActivity$Basics_InspectActivity" />
+        <activity android:name=".app.activity.Ins_ItemActivity" />
+        <activity
+            android:name=".app.activity.Inv_ItemActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".app.activity.AlterActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".app.activity.two.Mova_BasicActivity" />
+        <activity
+            android:name=".app.activity.two.PaymentdetailsActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".app.activity.RankingActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".app.activity.AddBasicsWcActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".app.activity.AddRoadActivity" />
+        <activity android:name=".app.activity.AddWasteActivity" />
+        <activity android:name=".app.activity.AddPeopleActivity" />
+        <activity android:name=".app.activity.AddLeaderActivity" />
+        <activity android:name=".app.activity.DetailsWcActivity" />
+        <activity android:name=".app.activity.DetailsRoadActivity" />
+        <activity android:name=".app.activity.DetailsWasteActivity" />
+        <activity android:name=".app.activity.two.HomeActivity">
+
+        </activity>
+        <activity android:name=".app.activity.two.WcActivity"
+            android:windowSoftInputMode="stateHidden"
+            />
+        <activity android:name=".app.activity.two.WasteActivity"
+            android:windowSoftInputMode="stateHidden"/>
+        <activity android:name=".app.activity.two.PeopleActivity"
+            android:windowSoftInputMode="stateHidden"/>
+        <activity android:name=".app.activity.two.RoadActivity"
+            android:windowSoftInputMode="stateHidden"/>
+    </application>
+
+</manifest>

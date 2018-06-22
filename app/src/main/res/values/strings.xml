@@ -1,0 +1,49 @@
+<resources>
+    <string name="app_name">智慧环卫</string>
+
+    <string name="Search"> 搜索地点</string>
+    <string name="viewpager_indicator">%1$d/%2$d</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="hint_login_username">请输入登录名</string>
+    <string name="hint_login_password">输入密码</string>
+    <string name="login">登录</string>
+    <string name="login_forget_pwd">忘记密码</string>
+    <string name="please_input_limit_pwd">请输入数字或字母</string>
+    <string name="title_local">消息</string>
+    <string name="title_recent">首页</string>
+    <string name="title_marked">分类</string>
+    <string name="basics_investigate">待审核数据</string>
+    <string name="basics_alter">最近修改</string>
+    <string name="basics_ins">基础数据</string>
+    <string name="basics_wc">公厕</string>
+    <string name="title_activity_add">AddActivity</string>
+    <string name="title_add">新增</string>
+    <string name="ins_wc">公厕</string>
+    <string name="ins_addwc">新增公厕</string>
+    <string name="ins_road">道路</string>
+    <string name="ins_addroad">新增道路</string>
+    <string name="ins_waste">垃圾篓</string>
+    <string name="ins_addwaste">新增垃圾篓</string>
+    <string name="ins_people">人员</string>
+    <string name="ins_addpeople">新增人员</string>
+    <string name="verified">审核通过</string>
+    <string name="non_approval">审核不通过</string>
+
+
+    <!-- 环卫中心监督检查考核平台  -->
+    <string name="m_basic_home_rd">首页</string>
+    <string name="m_basic_grids_rd">网格案件</string>
+    <string name="m_basic_guaz_rd">挂账案件</string>
+    <string name="m_basic_statistics_rd">案件统计</string>
+    <string name="title_activity_main2">Main2Activity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+
+</resources>

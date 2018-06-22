@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="1"
+    tools:context="com.reeching.sanitation.app.activity.two.PaymentdetailsActivity">
+
+    <include
+        android:id="@+id/include4"
+        layout="@layout/top_layout"></include>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/txtbottomshare"
+        android:layout_below="@+id/include4"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/shape_search_bg"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <TextView
+                    style="@style/NoStarTv"
+                    android:text="案卷号：" />
+
+                <TextView
+                    android:id="@+id/fileNumber"
+                    style="@style/add_Edit1" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="5dp"
+                android:visibility="gone">
+
+                <TextView
+                    style="@style/NoStarTv"
+                    android:text="案件类型：" />
+
+                <TextView
+                    android:id="@+id/caseType"
+                    style="@style/add_Edit1" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <TextView
+                    style="@style/NoStarTv"
+                    android:text="点位名称：" />
+
+                <TextView
+                    android:id="@+id/pointName"
+                    style="@style/add_Edit1"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <TextView
+                    style="@style/NoStarTv"
+                    android:text="责任单位：" />
+
+                <TextView
+                    android:id="@+id/blameUnit"
+                    style="@style/add_Edit1" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <TextView
+                    style="@style/NoStarTv"
+                    android:text="账号：" />
+
+                <TextView
+                    android:id="@+id/accountNo"
+                    style="@style/add_Edit1" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <TextView
+                    style="@style/NoStarTv"
+                    android:text="作业公司：" />
+
+                <TextView
+                    android:id="@+id/companyName"
+                    style="@style/add_Edit1" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <TextView
+                    style="@style/NoStarTv"
+                    android:text="作业类型：" />
+
+                <TextView
+                    android:id="@+id/workType"
+                    style="@style/add_Edit1" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <TextView
+                    style="@style/NoStarTv"
+                    android:text="所属街乡：" />
+
+                <TextView
+                    android:id="@+id/belongStreet"
+                    style="@style/add_Edit1" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <TextView
+                    style="@style/NoStarTv"
+                    android:text="问题描述：" />
+
+                <TextView
+                    android:id="@+id/caseDesc"
+                    style="@style/add_Edit1" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <TextView
+                    style="@style/NoStarTv"
+                    android:text="非我权属单位：" />
+
+                <TextView
+                    android:id="@+id/belongNoMe"
+                    style="@style/add_Edit1" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <TextView
+                    style="@style/NoStarTv"
+                    android:text="挂账：" />
+
+                <TextView
+                    android:id="@+id/isBill"
+                    style="@style/add_Edit1" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <TextView
+                    style="@style/NoStarTv"
+                    android:text="案件状态：" />
+
+                <TextView
+                    android:id="@+id/caseState"
+                    style="@style/add_Edit1" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <TextView
+                    style="@style/NoStarTv"
+                    android:text="备注信息：" />
+
+                <TextView
+                    android:id="@+id/remark"
+                    style="@style/add_Edit1" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:paddingBottom="5dp"
+                android:background="@drawable/biankuang_bottom"
+                android:text="问题图片"
+                android:textSize="18sp" />
+
+            <com.reeching.sanitation.app.view.MyGridView
+                android:id="@+id/grid_photo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:columnWidth="90dp"
+                android:gravity="center"
+                android:numColumns="auto_fit" />
+                <ImageView
+                    android:id="@+id/photo_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:src="@mipmap/nopic"
+                    android:visibility="gone"
+                    />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:paddingBottom="5dp"
+                android:background="@drawable/biankuang_bottom"
+                android:text="问题历史回复"
+                android:textSize="18sp" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp" />
+            <TextView
+                android:id="@+id/recycler_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:visibility="gone"
+                android:text="无"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:paddingBottom="5dp"
+                android:background="@drawable/biankuang_bottom"
+                android:text="问题流程"
+                android:textSize="18sp" />
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_flow"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp" />
+            <TextView
+                android:id="@+id/recycler_flow_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:visibility="gone"
+                android:text="无"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/lin1"
+
+                >
+                <Button
+                    android:id="@+id/gaiPai"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/shape_bg"
+                    android:layout_margin="20dp"
+                    android:text="改派"
+                    android:textColor="@color/white"
+                    />
+                <Button
+                    android:id="@+id/nomeArea"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/shape_bg"
+                    android:text="非我辖区"
+                    android:layout_margin="20dp"
+                    android:textColor="@color/white"
+                    />
+                <Button
+                    android:id="@+id/nomeBelongUnit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/shape_bg"
+                    android:text="非我权属"
+                    android:layout_margin="20dp"
+                    android:textColor="@color/white"
+                    />
+                <Button
+                    android:id="@+id/caseBillSelects"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/shape_bg"
+                    android:text="挂账"
+                    android:visibility="gone"
+                    android:textColor="@color/white"
+                    />
+                <Button
+                    android:id="@+id/revokeCase"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/shape_bg"
+                    android:text="撤销"
+                    android:textColor="@color/white"
+                    android:visibility="gone"
+                    />
+                <Button
+                    android:id="@+id/delSelects"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/shape_bg"
+                    android:text="删除"
+                    android:textColor="@color/white"
+                    android:visibility="gone"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+    </ScrollView>
+
+
+    <RelativeLayout
+        android:id="@+id/txtbottomshare"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="@drawable/write_comment"
+        android:layout_margin="5dp"
+        android:gravity="center_vertical">
+
+        <EditText
+            android:id="@+id/txtedit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/btnpinglun"
+            android:layout_toStartOf="@+id/btnpinglun"
+            android:background="@null"
+            android:enabled="true"
+            android:padding="8dp"
+
+            />
+
+        <TextView
+            android:id="@+id/btnpinglun"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/txtedit"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="回复"
+            android:textSize="17sp" />
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

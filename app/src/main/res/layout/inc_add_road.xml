@@ -1,0 +1,482 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/add_StarTv"
+            android:text="标           号 ：" />
+
+        <EditText
+            android:id="@+id/add_road_1"
+            style="@style/add_Edit1"
+            android:inputType="number"
+             />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textView27"
+            style="@style/add_StarTv"
+            android:text="条 数 编 号 ：" />
+
+        <EditText
+            android:id="@+id/add_road_2"
+            style="@style/add_Edit1"
+             />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/add_StarTv"
+            android:text="道 路 名 称 ：" />
+
+        <EditText
+            android:id="@+id/add_road_3"
+            style="@style/add_Edit1"
+             />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <TextView
+            style="@style/add_StarTv"
+            android:text="基础objectKey：" />
+
+        <TextView
+            android:id="@+id/add_road_4"
+            style="@style/add_Spinner" />
+
+        <TextView
+            android:id="@+id/add_road_4Tv"
+            style="@style/add_Spinner"
+           />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <TextView
+            style="@style/add_StarTv"
+            android:text="道 路 级 别 ：" />
+
+        <Spinner
+            android:id="@+id/add_road_5"
+            style="@style/add_Spinner" />
+        <TextView
+            android:id="@+id/add_road_5Tv"
+            style="@style/add_Spinner" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+           style="@style/add_StarTv"
+            android:text="区           域 ：" />
+        <Spinner
+            style="@style/add_Spinner"
+            android:id="@+id/add_areaType"
+            />
+        <TextView
+            style="@style/add_Spinner"
+            android:id="@+id/add_areaTypeTv"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:visibility="gone"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/add_StarTv"
+            android:text="接 入 时 间 ：" />
+
+        <EditText
+            android:id="@+id/add_road_6"
+            style="@style/add_Edit1"
+             />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/add_StarTv"
+            android:text="路 段 起 点 ：" />
+
+        <EditText
+            android:id="@+id/add_road_7"
+            style="@style/add_Edit1"
+             />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/add_StarTv"
+            android:text="路 段 止 点 ：" />
+
+        <EditText
+            android:id="@+id/add_road_8"
+            style="@style/add_Edit1"
+             />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/add_StarTv"
+            android:text="分 管 领 导 ：" />
+
+        <TextView
+            android:id="@+id/add_road_9"
+            style="@style/add_Edit1"
+             />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/add_StarTv"
+            android:text="所 属 场 队 ：" />
+
+        <TextView
+            android:id="@+id/add_road_10"
+            style="@style/add_Edit1"
+             />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/add_StarTv"
+            android:text="场队负责人：" />
+
+        <TextView
+            android:id="@+id/add_road_11"
+            style="@style/add_Edit1"
+             />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/add_NoStarTv"
+            android:text="所 属 分 队 ：" />
+
+        <TextView
+            android:id="@+id/add_road_12"
+            style="@style/add_Edit1"
+             />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/add_NoStarTv"
+            android:text="分队负责人：" />
+
+        <TextView
+            android:id="@+id/add_road_13"
+            style="@style/add_Edit1"
+             />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/add_NoStarTv"
+            android:text="所 属 班 组 ：" />
+
+        <TextView
+            android:id="@+id/add_road_14"
+            style="@style/add_Edit1"
+             />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/add_NoStarTv"
+            android:text="班组负责人：" />
+
+        <TextView
+            android:id="@+id/add_road_15"
+            style="@style/add_Edit1"
+             />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/add_StarTv"
+            android:text="专 业 委 托 ：" />
+
+        <Spinner
+            style="@style/add_Spinner"
+            android:id="@+id/add_road_company"
+            />
+        <TextView
+            style="@style/add_Spinner"
+            android:id="@+id/add_road_companyTv"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/add_StarTv"
+            android:text="委 托 公 司 ：" />
+
+        <Spinner
+            style="@style/add_Spinner"
+            android:id="@+id/add_road_16"
+            />
+        <TextView
+            style="@style/add_Spinner"
+            android:id="@+id/add_road_16Tv"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/add_StarTv"
+            android:text="分 段 编 号 ：" />
+
+        <EditText
+            android:id="@+id/add_road_17"
+            style="@style/add_Edit1"
+             />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/add_StarTv"
+            android:text="道 路 分 段 ：" />
+
+        <EditText
+            android:id="@+id/add_road_18"
+            style="@style/add_Edit1"
+             />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/add_StarTv"
+            android:text="最小段起点：" />
+        <EditText
+            android:id="@+id/add_road_19"
+            style="@style/add_Edit1"
+             />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/add_StarTv"
+            android:text="最小段止点：" />
+        <EditText
+            android:id="@+id/add_road_20"
+            style="@style/add_Edit1"
+             />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/add_StarTv"
+            android:text="所 属 街 乡 ：" />
+        <TextView
+            android:id="@+id/add_road_21"
+            style="@style/add_Edit1"
+             />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/add_StarTv"
+            android:text="所 属 社 区 ：" />
+        <TextView
+            android:id="@+id/add_road_22"
+            style="@style/add_Edit1"
+             />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/add_StarTv"
+            android:text="所 属 网 格 ：" />
+
+        <EditText
+            android:id="@+id/add_road_23"
+            style="@style/add_Edit1"
+             />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/add_StarTv"
+            android:text="简           码 ：" />
+
+        <EditText
+            android:id="@+id/add_road_24"
+            style="@style/add_Edit1"
+             />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/add_StarTv"
+            android:text="顺           码 ：" />
+
+        <EditText
+            android:id="@+id/add_road_orderNo"
+            style="@style/add_Edit1"
+             />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:visibility="gone"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/add_NoStarTv"
+            android:text="审 核 时 间 ：" />
+
+        <EditText
+            android:id="@+id/add_road_25"
+            style="@style/add_Edit1"
+             />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:visibility="gone"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/add_NoStarTv"
+            android:text="数 据 来 源 ：" />
+
+        <EditText
+            android:id="@+id/add_road_26"
+            style="@style/add_Edit"
+             />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/add_NoStarTv"
+            android:text="备 注 信 息 ：" />
+
+        <EditText
+            android:id="@+id/add_road_27"
+            style="@style/add_Edit"
+             />
+    </LinearLayout>
+
+</LinearLayout>

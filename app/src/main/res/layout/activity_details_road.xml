@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.reeching.sanitation.app.activity.Ins_ItemActivity">
+    <include
+        android:id="@+id/include"
+        layout="@layout/top_layout"></include>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+            <include
+                layout="@layout/inc_add_road"></include>
+
+            <EditText
+                android:id="@+id/audit_status"
+                style="@style/add_Edit"
+                />
+            <LinearLayout
+                android:id="@+id/details_road"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                >
+                <Button
+                    android:id="@+id/approve"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="审核通过"
+                    android:layout_weight="1"
+                    />
+                <Button
+                    android:id="@+id/audit_failure"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="审核不通过"
+                    android:layout_weight="1"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
+
