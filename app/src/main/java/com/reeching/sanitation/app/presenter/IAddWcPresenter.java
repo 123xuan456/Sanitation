@@ -99,6 +99,7 @@ public class IAddWcPresenter extends RxPresenter<AddBasicsViewContract.View> imp
     @Override
     public void getWorkCompanySpinner() {
         OkGo.<WorkCompanyBean>get(FINDWORKCOMPANY).tag(this)
+                .cacheMode(CacheMode.FIRST_CACHE_THEN_REQUEST)
                 .execute(new JsonCallback<WorkCompanyBean>(WorkCompanyBean.class) {
                     @Override
                     public void onSuccess(Response<WorkCompanyBean> response) {
@@ -108,7 +109,11 @@ public class IAddWcPresenter extends RxPresenter<AddBasicsViewContract.View> imp
                             mView.showWorkCompanySpinner(info);
                         }
                     }
-
+                    @Override
+                    public void onCacheSuccess(Response<WorkCompanyBean> response) {
+                        super.onCacheSuccess(response);
+                        onSuccess(response);
+                    }
                     @Override
                     public void onFinish() {
                         super.onFinish();
@@ -121,6 +126,7 @@ public class IAddWcPresenter extends RxPresenter<AddBasicsViewContract.View> imp
     public void getTioletClassSpinner() {
         OkGo.<AddSpinnerBean>post(GETSELECTLIST).tag(this)
                 .params("type", "tioletClass")
+                .cacheMode(CacheMode.FIRST_CACHE_THEN_REQUEST)
                 .execute(new JsonCallback<AddSpinnerBean>(AddSpinnerBean.class) {
                     @Override
                     public void onSuccess(Response<AddSpinnerBean> response) {
@@ -130,7 +136,11 @@ public class IAddWcPresenter extends RxPresenter<AddBasicsViewContract.View> imp
                             mView.showTioletClassSpinner(info);
                         }
                     }
-
+                    @Override
+                    public void onCacheSuccess(Response<AddSpinnerBean> response) {
+                        super.onCacheSuccess(response);
+                        onSuccess(response);
+                    }
                     @Override
                     public void onError(Response<AddSpinnerBean> response) {
                         super.onError(response);
@@ -148,6 +158,7 @@ public class IAddWcPresenter extends RxPresenter<AddBasicsViewContract.View> imp
     public void getPropertyRightSpinner() {
         OkGo.<AddSpinnerBean>post(GETSELECTLIST).tag(this)
                 .params("type", "propertyRight")
+                .cacheMode(CacheMode.FIRST_CACHE_THEN_REQUEST)
                 .execute(new JsonCallback<AddSpinnerBean>(AddSpinnerBean.class) {
                     @Override
                     public void onSuccess(Response<AddSpinnerBean> response) {
@@ -157,7 +168,11 @@ public class IAddWcPresenter extends RxPresenter<AddBasicsViewContract.View> imp
                             mView.showPropertyRightSpinner(info);
                         }
                     }
-
+                    @Override
+                    public void onCacheSuccess(Response<AddSpinnerBean> response) {
+                        super.onCacheSuccess(response);
+                        onSuccess(response);
+                    }
                     @Override
                     public void onError(Response<AddSpinnerBean> response) {
                         super.onError(response);
@@ -175,6 +190,7 @@ public class IAddWcPresenter extends RxPresenter<AddBasicsViewContract.View> imp
     public void getTioletLevelSpinner() {
         OkGo.<AddSpinnerBean>post(GETSELECTLIST).tag(this)
                 .params("type", "tioletLevel")
+                .cacheMode(CacheMode.FIRST_CACHE_THEN_REQUEST)
                 .execute(new JsonCallback<AddSpinnerBean>(AddSpinnerBean.class) {
                     @Override
                     public void onSuccess(Response<AddSpinnerBean> response) {
@@ -184,7 +200,11 @@ public class IAddWcPresenter extends RxPresenter<AddBasicsViewContract.View> imp
                             mView.showTioletLevelSpinner(info);
                         }
                     }
-
+                    @Override
+                    public void onCacheSuccess(Response<AddSpinnerBean> response) {
+                        super.onCacheSuccess(response);
+                        onSuccess(response);
+                    }
                     @Override
                     public void onError(Response<AddSpinnerBean> response) {
                         super.onError(response);
@@ -202,6 +222,7 @@ public class IAddWcPresenter extends RxPresenter<AddBasicsViewContract.View> imp
     public void getBarrierFacilitiesSpinner() {
         OkGo.<AddSpinnerBean>post(GETSELECTLIST).tag(this)
                 .params("type", "barrierFacilities")
+                .cacheMode(CacheMode.FIRST_CACHE_THEN_REQUEST)
                 .execute(new JsonCallback<AddSpinnerBean>(AddSpinnerBean.class) {
                     @Override
                     public void onSuccess(Response<AddSpinnerBean> response) {
@@ -211,7 +232,11 @@ public class IAddWcPresenter extends RxPresenter<AddBasicsViewContract.View> imp
                             mView.showBarrierFacilitiesSpinner(info);
                         }
                     }
-
+                    @Override
+                    public void onCacheSuccess(Response<AddSpinnerBean> response) {
+                        super.onCacheSuccess(response);
+                        onSuccess(response);
+                    }
                     @Override
                     public void onError(Response<AddSpinnerBean> response) {
                         super.onError(response);
@@ -229,6 +254,7 @@ public class IAddWcPresenter extends RxPresenter<AddBasicsViewContract.View> imp
     public void getTioletTypeSpinner() {
         OkGo.<AddSpinnerBean>post(GETSELECTLIST).tag(this)
                 .params("type", "tioletType")
+                .cacheMode(CacheMode.FIRST_CACHE_THEN_REQUEST)
                 .execute(new JsonCallback<AddSpinnerBean>(AddSpinnerBean.class) {
                     @Override
                     public void onSuccess(Response<AddSpinnerBean> response) {
@@ -238,7 +264,11 @@ public class IAddWcPresenter extends RxPresenter<AddBasicsViewContract.View> imp
                             mView.showTioletTypeSpinner(info);
                         }
                     }
-
+                    @Override
+                    public void onCacheSuccess(Response<AddSpinnerBean> response) {
+                        super.onCacheSuccess(response);
+                        onSuccess(response);
+                    }
                     @Override
                     public void onError(Response<AddSpinnerBean> response) {
                         super.onError(response);
@@ -256,6 +286,7 @@ public class IAddWcPresenter extends RxPresenter<AddBasicsViewContract.View> imp
     public void getManageTypeSpinner() {
         OkGo.<AddSpinnerBean>post(GETSELECTLIST).tag(this)
                 .params("type", "manageType")
+                .cacheMode(CacheMode.FIRST_CACHE_THEN_REQUEST)
                 .execute(new JsonCallback<AddSpinnerBean>(AddSpinnerBean.class) {
                     @Override
                     public void onSuccess(Response<AddSpinnerBean> response) {
@@ -265,7 +296,11 @@ public class IAddWcPresenter extends RxPresenter<AddBasicsViewContract.View> imp
                             mView.showManageTypeSpinner(info);
                         }
                     }
-
+                    @Override
+                    public void onCacheSuccess(Response<AddSpinnerBean> response) {
+                        super.onCacheSuccess(response);
+                        onSuccess(response);
+                    }
                     @Override
                     public void onError(Response<AddSpinnerBean> response) {
                         super.onError(response);
@@ -283,6 +318,7 @@ public class IAddWcPresenter extends RxPresenter<AddBasicsViewContract.View> imp
     public void getAreaTypeSpinner() {
         OkGo.<AddSpinnerBean>post(GETSELECTLIST).tag(this)
                 .params("type", "area_type")
+                .cacheMode(CacheMode.FIRST_CACHE_THEN_REQUEST)
                 .execute(new JsonCallback<AddSpinnerBean>(AddSpinnerBean.class) {
                     @Override
                     public void onSuccess(Response<AddSpinnerBean> response) {
@@ -292,7 +328,11 @@ public class IAddWcPresenter extends RxPresenter<AddBasicsViewContract.View> imp
                             mView.showAreaTypeSpinner(info);
                         }
                     }
-
+                    @Override
+                    public void onCacheSuccess(Response<AddSpinnerBean> response) {
+                        super.onCacheSuccess(response);
+                        onSuccess(response);
+                    }
                     @Override
                     public void onError(Response<AddSpinnerBean> response) {
                         super.onError(response);
@@ -310,6 +350,7 @@ public class IAddWcPresenter extends RxPresenter<AddBasicsViewContract.View> imp
     public void getOperationSpinner() {
         OkGo.<AddSpinnerBean>post(GETSELECTLIST).tag(this)
                 .params("type", "operation")
+                .cacheMode(CacheMode.FIRST_CACHE_THEN_REQUEST)
                 .execute(new JsonCallback<AddSpinnerBean>(AddSpinnerBean.class) {
                     @Override
                     public void onSuccess(Response<AddSpinnerBean> response) {
@@ -319,7 +360,11 @@ public class IAddWcPresenter extends RxPresenter<AddBasicsViewContract.View> imp
                             mView.showOperationSpinner(info);
                         }
                     }
-
+                    @Override
+                    public void onCacheSuccess(Response<AddSpinnerBean> response) {
+                        super.onCacheSuccess(response);
+                        onSuccess(response);
+                    }
                     @Override
                     public void onError(Response<AddSpinnerBean> response) {
                         super.onError(response);

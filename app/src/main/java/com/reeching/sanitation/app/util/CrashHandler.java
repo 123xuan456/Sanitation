@@ -3,6 +3,7 @@ package com.reeching.sanitation.app.util;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Looper;
+import android.util.Log;
 
 import com.reeching.sanitation.app.activity.two.HomeActivity;
 
@@ -21,8 +22,8 @@ public class CrashHandler implements Thread.UncaughtExceptionHandler {
 
     @Override
     public void uncaughtException(Thread t, Throwable e) {
-        LogUtils.i(e.toString());
-        showToast(t);
+        LogUtils.e(e.toString());
+        unException(t,e);
     }
 
     /**
@@ -30,7 +31,7 @@ public class CrashHandler implements Thread.UncaughtExceptionHandler {
      *
      * @param thread
      */
-    private void showToast(Thread thread) {
+    private void unException(Thread thread, Throwable ex) {
         new Thread(new Runnable() {
             @Override
             public void run() {
@@ -39,7 +40,10 @@ public class CrashHandler implements Thread.UncaughtExceptionHandler {
                 Looper.loop();
             }
         }).start();
-
+        Log.e("Sandy", "uncaughtException, thread: " + thread
+                + " name: " + thread.getName() + " id: " + thread.getId() + "exception: "
+                + ex);
+        String threadName = thread.getName();
         try {
             thread.sleep(2000);
         } catch (InterruptedException e) {

@@ -65,11 +65,11 @@
 
         <TextView
             android:id="@+id/add_road_4"
-            style="@style/add_Spinner" />
+            style="@style/add_text" />
 
         <TextView
             android:id="@+id/add_road_4Tv"
-            style="@style/add_Spinner"
+            style="@style/add_text"
            />
     </LinearLayout>
 

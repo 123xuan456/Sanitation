@@ -30,6 +30,7 @@ public class App extends Application {
         SharedPreferencesUtil.init(getApplicationContext(), getPackageName() + "_preference", Context.MODE_MULTI_PROCESS);
         OkGo.getInstance().init(this);
         Thread.setDefaultUncaughtExceptionHandler(new CrashHandler(sInstance));
+
         ImageLoaderConfiguration configuration = ImageLoaderConfiguration
                 .createDefault(this);
         //Initialize ImageLoader with configuration.

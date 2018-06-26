@@ -80,12 +80,12 @@
 
         <TextView
             android:id="@+id/add_okey"
-            style="@style/add_Spinner"
+            style="@style/add_text"
              />
         <!--android:drawableRight="@drawable/icon_down"-->
         <TextView
             android:id="@+id/add_okey_tv"
-            style="@style/add_Spinner"
+            style="@style/add_text"
             android:visibility="gone"
             />
 

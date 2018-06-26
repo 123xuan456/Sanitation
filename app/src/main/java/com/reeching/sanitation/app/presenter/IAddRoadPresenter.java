@@ -122,6 +122,7 @@ public class IAddRoadPresenter extends RxPresenter<AddRoadContract.View> impleme
     public void getAreaTypeSpinner() {
         OkGo.<AddSpinnerBean>post(GETSELECTLIST).tag(this)
                 .params("type", "area_type")
+                .cacheMode(CacheMode.FIRST_CACHE_THEN_REQUEST)
                 .execute(new JsonCallback<AddSpinnerBean>(AddSpinnerBean.class) {
                     @Override
                     public void onSuccess(Response<AddSpinnerBean> response) {
@@ -131,7 +132,11 @@ public class IAddRoadPresenter extends RxPresenter<AddRoadContract.View> impleme
                             mView.showAreaTypeSpinner(info);
                         }
                     }
-
+                    @Override
+                    public void onCacheSuccess(Response<AddSpinnerBean> response) {
+                        super.onCacheSuccess(response);
+                        onSuccess(response);
+                    }
                     @Override
                     public void onError(Response<AddSpinnerBean> response) {
                         super.onError(response);
@@ -149,6 +154,7 @@ public class IAddRoadPresenter extends RxPresenter<AddRoadContract.View> impleme
     public void getStreetLevelSpinner() {
         OkGo.<AddSpinnerBean>post(GETSELECTLIST).tag(this)
                 .params("type", "streetLevel")
+                .cacheMode(CacheMode.FIRST_CACHE_THEN_REQUEST)
                 .execute(new JsonCallback<AddSpinnerBean>(AddSpinnerBean.class) {
                     @Override
                     public void onSuccess(Response<AddSpinnerBean> response) {
@@ -158,7 +164,11 @@ public class IAddRoadPresenter extends RxPresenter<AddRoadContract.View> impleme
                             mView.showStreetLevelSpinner(info);
                         }
                     }
-
+                    @Override
+                    public void onCacheSuccess(Response<AddSpinnerBean> response) {
+                        super.onCacheSuccess(response);
+                        onSuccess(response);
+                    }
                     @Override
                     public void onError(Response<AddSpinnerBean> response) {
                         super.onError(response);
@@ -179,6 +189,7 @@ public class IAddRoadPresenter extends RxPresenter<AddRoadContract.View> impleme
     public void getCompanyTypeSpinner() {
         OkGo.<AddSpinnerBean>post(GETSELECTLIST).tag(this)
                 .params("type", "company_type")
+                .cacheMode(CacheMode.FIRST_CACHE_THEN_REQUEST)
                 .execute(new JsonCallback<AddSpinnerBean>(AddSpinnerBean.class) {
                     @Override
                     public void onSuccess(Response<AddSpinnerBean> response) {
@@ -188,7 +199,11 @@ public class IAddRoadPresenter extends RxPresenter<AddRoadContract.View> impleme
                             mView.showCompanyTypeSpinner(info);
                         }
                     }
-
+                    @Override
+                    public void onCacheSuccess(Response<AddSpinnerBean> response) {
+                        super.onCacheSuccess(response);
+                        onSuccess(response);
+                    }
                     @Override
                     public void onError(Response<AddSpinnerBean> response) {
                         super.onError(response);

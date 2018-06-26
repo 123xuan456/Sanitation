@@ -90,6 +90,12 @@ public class IAddWastePresenter extends RxPresenter<AddWasteContract.View> imple
                     }
 
                     @Override
+                    public void onCacheSuccess(Response<FindBaseIdBean> response) {
+                        super.onCacheSuccess(response);
+                        onSuccess(response);
+                    }
+
+                    @Override
                     public void onFinish() {
                         super.onFinish();
 
@@ -100,6 +106,7 @@ public class IAddWastePresenter extends RxPresenter<AddWasteContract.View> imple
     @Override
     public void getWorkCompanySpinner() {
         OkGo.<WorkCompanyBean>get(FINDWORKCOMPANY).tag(this)
+                .cacheMode(CacheMode.FIRST_CACHE_THEN_REQUEST)
                 .execute(new JsonCallback<WorkCompanyBean>(WorkCompanyBean.class) {
                     @Override
                     public void onSuccess(Response<WorkCompanyBean> response) {
@@ -109,7 +116,11 @@ public class IAddWastePresenter extends RxPresenter<AddWasteContract.View> imple
                             mView.showWorkCompanySpinner(info);
                         }
                     }
-
+                    @Override
+                    public void onCacheSuccess(Response<WorkCompanyBean> response) {
+                        super.onCacheSuccess(response);
+                        onSuccess(response);
+                    }
                     @Override
                     public void onFinish() {
                         super.onFinish();
@@ -123,6 +134,7 @@ public class IAddWastePresenter extends RxPresenter<AddWasteContract.View> imple
     public void getAreaTypeSpinner() {
         OkGo.<AddSpinnerBean>post(GETSELECTLIST).tag(this)
                 .params("type", "area_type")
+                .cacheMode(CacheMode.FIRST_CACHE_THEN_REQUEST)
                 .execute(new JsonCallback<AddSpinnerBean>(AddSpinnerBean.class) {
                     @Override
                     public void onSuccess(Response<AddSpinnerBean> response) {
@@ -138,7 +150,11 @@ public class IAddWastePresenter extends RxPresenter<AddWasteContract.View> imple
                         super.onError(response);
                         mView.showError();
                     }
-
+                    @Override
+                    public void onCacheSuccess(Response<AddSpinnerBean> response) {
+                        super.onCacheSuccess(response);
+                        onSuccess(response);
+                    }
                     @Override
                     public void onFinish() {
                         super.onFinish();
@@ -152,6 +168,7 @@ public class IAddWastePresenter extends RxPresenter<AddWasteContract.View> imple
     public void getPropertyRightSpinner() {
         OkGo.<AddSpinnerBean>post(GETSELECTLIST).tag(this)
                 .params("type", "propertyRight")
+                .cacheMode(CacheMode.FIRST_CACHE_THEN_REQUEST)
                 .execute(new JsonCallback<AddSpinnerBean>(AddSpinnerBean.class) {
                     @Override
                     public void onSuccess(Response<AddSpinnerBean> response) {
@@ -161,7 +178,11 @@ public class IAddWastePresenter extends RxPresenter<AddWasteContract.View> imple
                             mView.showPropertyRightSpinner(info);
                         }
                     }
-
+                    @Override
+                    public void onCacheSuccess(Response<AddSpinnerBean> response) {
+                        super.onCacheSuccess(response);
+                        onSuccess(response);
+                    }
                     @Override
                     public void onError(Response<AddSpinnerBean> response) {
                         super.onError(response);

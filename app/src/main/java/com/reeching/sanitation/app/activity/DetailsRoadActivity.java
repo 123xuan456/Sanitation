@@ -163,7 +163,7 @@ public class DetailsRoadActivity extends AppCompatActivity implements DetailsRoa
             case R.id.audit_failure:
                 new InputDialog.Builder(this)
                         .setTitle("请输入审核不通过原因")
-                        .setHint("提示内容！！！")
+                        .setHint("")
                         .setLines(5)
                         .setPositiveButton("确定", new View.OnClickListener() {
                             @Override

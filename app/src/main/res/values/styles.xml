@@ -28,7 +28,7 @@
     <!-- EditText基本样式 -->
     <style name="add_Edit1">
         <item name="android:background">@drawable/shape_search_bg</item>
-        <item name="android:paddingLeft">5dp</item>
+        <item name="android:padding">3dp</item>
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textSize">14sp</item>
@@ -40,15 +40,23 @@
         <item name="android:paddingLeft">5dp</item>
         <item name="android:gravity">start</item>
         <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">60dp</item>
+        <item name="android:layout_height">match_parent</item>
     </style>
     <!-- 下拉框样式 -->
     <style name="add_Spinner">
+        <item name="android:background">@drawable/shape_search_bg</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+    <!-- 基础objectKey信息样式 -->
+    <style name="add_text">
         <item name="android:background">@drawable/shape_search_bg</item>
         <item name="android:padding">3dp</item>
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
     </style>
+
+
     <!-- 标注必填项 -->
     <style name="add_StarTv">
         <item name="android:gravity">center</item>

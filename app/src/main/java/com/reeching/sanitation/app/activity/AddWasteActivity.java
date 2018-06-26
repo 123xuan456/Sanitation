@@ -338,7 +338,9 @@ public class AddWasteActivity extends BaseAddActivity implements AddWasteContrac
                 break;
             case R.id.add_waste4:
 //                mSpinerPopWindow.setWidth(addWaste4.getWidth());
-                mSpinerPopWindow.showAsDropDown(addWaste4);
+                if(mSpinerPopWindow!=null){
+                    mSpinerPopWindow.showAsDropDown(addWaste4);
+                }
                 break;
             
             case R.id.add_:

@@ -61,10 +61,10 @@
             android:text="基础objectKey：" />
         <TextView
             android:id="@+id/add_waste4"
-            style="@style/add_Spinner" />
+            style="@style/add_text" />
         <TextView
             android:id="@+id/add_waste4Tv"
-            style="@style/add_Spinner"
+            style="@style/add_text"
             />
     </LinearLayout>
     <LinearLayout

@@ -204,7 +204,9 @@ public class AddRoadActivity extends BaseAddActivity implements AddRoadContract.
                 break;
             case R.id.add_road_4:
 //                mSpinerPopWindow.setWidth(addRoad4.getWidth());
-                mSpinerPopWindow.showAsDropDown(addRoad4);
+                if(mSpinerPopWindow!=null){
+                    mSpinerPopWindow.showAsDropDown(addRoad4);
+                }
                 break;
 
             case R.id.add_road_21://所属街乡

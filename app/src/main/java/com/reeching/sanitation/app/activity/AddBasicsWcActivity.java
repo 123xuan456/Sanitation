@@ -728,7 +728,9 @@ public class AddBasicsWcActivity extends BaseAddActivity implements AddBasicsVie
                 break;
             case R.id.add_okey:
 //                mSpinerPopWindow.setWidth(addOkey.getWidth());
-                mSpinerPopWindow.showAsDropDown(addOkey);
+                if(mSpinerPopWindow!=null){
+                    mSpinerPopWindow.showAsDropDown(addOkey);
+                }
                 break;
             case R.id.add_12://所属街乡
                 i.setClass(AddBasicsWcActivity.this, AddLeaderActivity.class);
