@@ -5,7 +5,7 @@ import com.reeching.sanitation.app.bean.RoadDetailBean;
 
 /**
  * Created by 绍轩 on 2018/3/7.
- * 垃圾篓
+ * 垃圾楼
  */
 
 public interface DetailsRoadContract {

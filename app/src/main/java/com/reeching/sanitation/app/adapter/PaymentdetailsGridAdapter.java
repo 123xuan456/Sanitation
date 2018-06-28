@@ -8,8 +8,8 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.nostra13.universalimageloader.core.ImageLoader;
 import com.reeching.sanitation.R;
+import com.reeching.sanitation.app.util.ImageUtil;
 import com.reeching.sanitation.app.util.LogUtils;
 
 import java.util.ArrayList;
@@ -64,10 +64,10 @@ public class PaymentdetailsGridAdapter extends BaseAdapter {
         }
             String url = list.get(position);
 //            ImageLoader.getInstance().displayImage("http://192.168.3.110:8088/envir/userfiles/1/images/questionPhoto/2017/12/fdafdsa.png",
-//                    view.iv);
         LogUtils.i(list.size());
-            ImageLoader.getInstance().displayImage(url,
-                    view.iv);
+         ImageUtil.displayImage(mContext,url,view.iv);
+//            ImageLoader.getInstance().displayImage(url,
+//                    view.iv);
 
         return convertView;
     }

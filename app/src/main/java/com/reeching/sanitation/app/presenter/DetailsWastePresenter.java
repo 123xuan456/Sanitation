@@ -1,6 +1,7 @@
 package com.reeching.sanitation.app.presenter;
 
 import com.lzy.okgo.OkGo;
+import com.lzy.okgo.cache.CacheMode;
 import com.lzy.okgo.model.Response;
 import com.reeching.sanitation.app.base.RxPresenter;
 import com.reeching.sanitation.app.bean.JsonBean;
@@ -28,10 +29,16 @@ public class DetailsWastePresenter extends RxPresenter<DetailsWasteContract.View
     public void getWasteDetails(String id) {
         OkGo.<WasteDetailBean>post(RUBBISHDETAIL).tag(this)
                 .params("id", id)
+                .cacheMode(CacheMode.FIRST_CACHE_THEN_REQUEST)
                 .execute(new JsonCallback<WasteDetailBean>(WasteDetailBean.class) {
                     @Override
                     public void onSuccess(Response<WasteDetailBean> response) {
                         mView.showWasteDetail(response.body());
+                    }
+                    @Override
+                    public void onCacheSuccess(Response<WasteDetailBean> response) {
+                        super.onCacheSuccess(response);
+                        onSuccess(response);
                     }
                 });
 

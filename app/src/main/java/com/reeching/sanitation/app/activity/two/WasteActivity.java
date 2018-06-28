@@ -34,7 +34,7 @@ import static com.reeching.sanitation.app.contant.Contants.GETRUBBISHLIST;
 import static com.reeching.sanitation.app.util.ActivityUtil.openAct;
 
 /**
- * 垃圾篓管理
+ * 垃圾楼管理
  */
 public class WasteActivity extends Activity implements SwipeRefreshLayout.OnRefreshListener{
     private SwipeRefreshLayout mSwipeRefreshWidget;
@@ -100,7 +100,7 @@ public class WasteActivity extends Activity implements SwipeRefreshLayout.OnRefr
     private void initView() {
         topName=findViewById(R.id.top_name);
         topFinish=findViewById(R.id.top_finish);
-        topName.setText("垃圾篓");
+        topName.setText("垃圾楼");
         mSwipeRefreshWidget = (SwipeRefreshLayout) findViewById(R.id.swipe_refresh_widget);
         mRecyclerView = (RecyclerView)findViewById(R.id.recycle_view);
         topFinish.setOnClickListener(new View.OnClickListener() {

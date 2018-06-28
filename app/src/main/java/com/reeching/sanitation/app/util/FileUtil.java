@@ -76,7 +76,7 @@ public class FileUtil {
         return fileCopy(filePath,path);
     }
     /**
-     * 垃圾篓图片
+     * 垃圾楼图片
      * @param filePath
      */
 
@@ -86,7 +86,7 @@ public class FileUtil {
         return fileCopy(filePath,path);
     }
     /**
-     * 垃圾篓周边图片
+     * 垃圾楼周边图片
      * @param filePath
      */
 

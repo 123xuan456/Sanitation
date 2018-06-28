@@ -19,6 +19,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.lzy.okgo.OkGo;
+import com.lzy.okgo.cache.CacheMode;
 import com.lzy.okgo.model.Response;
 import com.reeching.sanitation.R;
 import com.reeching.sanitation.app.activity.AddLeaderActivity;
@@ -97,6 +98,7 @@ public class HomeActivity extends AppCompatActivity  implements NavigationView.O
 
     private void setBanner() {
         OkGo.<BannerBean>post(GETINDEXPHOTOLIST).tag(this)
+                .cacheMode(CacheMode.FIRST_CACHE_THEN_REQUEST)
                 .execute(new JsonCallback<BannerBean>(BannerBean.class) {
 
                     @Override

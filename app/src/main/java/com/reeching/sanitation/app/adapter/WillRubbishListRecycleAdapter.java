@@ -20,7 +20,7 @@ import static com.reeching.sanitation.app.contant.Contants.DELRUBBISHT;
 
 /**
  * Created by 绍轩 on 2017/12/13.
- * 垃圾篓
+ * 垃圾楼
  */
 
 public class WillRubbishListRecycleAdapter extends CommonBaseRecycleAdapter<RubbishListBean.InfosBean> {

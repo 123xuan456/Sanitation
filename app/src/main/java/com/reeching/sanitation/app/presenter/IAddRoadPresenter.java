@@ -5,6 +5,7 @@ import android.text.TextUtils;
 import com.lzy.okgo.OkGo;
 import com.lzy.okgo.cache.CacheMode;
 import com.lzy.okgo.model.Response;
+import com.lzy.okgo.request.base.Request;
 import com.reeching.sanitation.app.base.RxPresenter;
 import com.reeching.sanitation.app.bean.AddSpinnerBean;
 import com.reeching.sanitation.app.bean.FindBaseIdBean;
@@ -140,7 +141,7 @@ public class IAddRoadPresenter extends RxPresenter<AddRoadContract.View> impleme
                     @Override
                     public void onError(Response<AddSpinnerBean> response) {
                         super.onError(response);
-                        mView.showError();
+                        mView.complete();
                     }
 
                     @Override
@@ -172,7 +173,7 @@ public class IAddRoadPresenter extends RxPresenter<AddRoadContract.View> impleme
                     @Override
                     public void onError(Response<AddSpinnerBean> response) {
                         super.onError(response);
-                        mView.showError();
+                        mView.complete();
                     }
 
                     @Override
@@ -207,7 +208,7 @@ public class IAddRoadPresenter extends RxPresenter<AddRoadContract.View> impleme
                     @Override
                     public void onError(Response<AddSpinnerBean> response) {
                         super.onError(response);
-                        mView.showError();
+                        mView.complete();
                     }
 
                     @Override
@@ -237,6 +238,12 @@ public class IAddRoadPresenter extends RxPresenter<AddRoadContract.View> impleme
                 .params("orderNo",orderNo).params("simpleNo",simpleNo).params("remark",remark).params("areaType",areaType)
                 .execute(new JsonCallback<JsonBean>(JsonBean.class) {
                     @Override
+                    public void onStart(Request<JsonBean, ? extends Request> request) {
+                        super.onStart(request);
+                        mView.start();
+
+                    }
+                    @Override
                     public void onSuccess(Response<JsonBean> response) {
                         JsonBean jsonBean = response.body();
                         mView.showSaveMessage(jsonBean.getResult());
@@ -245,8 +252,11 @@ public class IAddRoadPresenter extends RxPresenter<AddRoadContract.View> impleme
                     @Override
                     public void onError(Response<JsonBean> response) {
                         super.onError(response);
-                        LogUtils.i(response.code());
-                        LogUtils.i(response.message());
+                    }
+                    @Override
+                    public void onFinish() {
+                        super.onFinish();
+                        mView.complete();
                     }
                 });
 

@@ -10,7 +10,7 @@
         android:layout_width="85dp"
         android:layout_height="85dp"
         android:id="@+id/my_header"
-        android:src="@drawable/icon_audio"
+        android:src="@mipmap/ic_launcher"
         android:layout_centerInParent="true"/>
 
     <TextView

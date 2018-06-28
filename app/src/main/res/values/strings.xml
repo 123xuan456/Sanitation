@@ -25,8 +25,8 @@
     <string name="ins_addwc">新增公厕</string>
     <string name="ins_road">道路</string>
     <string name="ins_addroad">新增道路</string>
-    <string name="ins_waste">垃圾篓</string>
-    <string name="ins_addwaste">新增垃圾篓</string>
+    <string name="ins_waste">垃圾楼</string>
+    <string name="ins_addwaste">新增垃圾楼</string>
     <string name="ins_people">人员</string>
     <string name="ins_addpeople">新增人员</string>
     <string name="verified">审核通过</string>

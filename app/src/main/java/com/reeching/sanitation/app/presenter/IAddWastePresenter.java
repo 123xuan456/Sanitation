@@ -6,6 +6,7 @@ import com.lzy.okgo.OkGo;
 import com.lzy.okgo.cache.CacheMode;
 import com.lzy.okgo.model.Response;
 import com.lzy.okgo.request.PostRequest;
+import com.lzy.okgo.request.base.Request;
 import com.reeching.sanitation.app.base.RxPresenter;
 import com.reeching.sanitation.app.bean.AddSpinnerBean;
 import com.reeching.sanitation.app.bean.FindBaseIdBean;
@@ -13,7 +14,6 @@ import com.reeching.sanitation.app.bean.JsonBean;
 import com.reeching.sanitation.app.bean.WorkCompanyBean;
 import com.reeching.sanitation.app.contract.AddWasteContract;
 import com.reeching.sanitation.app.util.JsonCallback;
-import com.reeching.sanitation.app.util.LogUtils;
 
 import java.io.File;
 import java.util.List;
@@ -29,7 +29,7 @@ import static com.reeching.sanitation.app.contant.Contants.SAVERUBBISH;
 
 /**
  * Created by 绍轩 on 2017/12/14.
- * 垃圾篓
+ * 垃圾楼
  */
 
 public class IAddWastePresenter extends RxPresenter<AddWasteContract.View> implements AddWasteContract.Presenter<AddWasteContract.View> {
@@ -148,7 +148,6 @@ public class IAddWastePresenter extends RxPresenter<AddWasteContract.View> imple
                     @Override
                     public void onError(Response<AddSpinnerBean> response) {
                         super.onError(response);
-                        mView.showError();
                     }
                     @Override
                     public void onCacheSuccess(Response<AddSpinnerBean> response) {
@@ -186,7 +185,6 @@ public class IAddWastePresenter extends RxPresenter<AddWasteContract.View> imple
                     @Override
                     public void onError(Response<AddSpinnerBean> response) {
                         super.onError(response);
-                        mView.showError();
                     }
 
                     @Override
@@ -222,6 +220,12 @@ public class IAddWastePresenter extends RxPresenter<AddWasteContract.View> imple
         }
         a.execute(new JsonCallback<JsonBean>(JsonBean.class) {
             @Override
+            public void onStart(Request<JsonBean, ? extends Request> request) {
+                super.onStart(request);
+                mView.start();
+
+            }
+            @Override
             public void onSuccess(Response<JsonBean> response) {
                 JsonBean jsonBean = response.body();
                 String s = jsonBean.getResult();
@@ -231,8 +235,11 @@ public class IAddWastePresenter extends RxPresenter<AddWasteContract.View> imple
             @Override
             public void onError(Response<JsonBean> response) {
                 super.onError(response);
-                LogUtils.i(response.code());
-                LogUtils.i(response.message());
+            }
+            @Override
+            public void onFinish() {
+                super.onFinish();
+                mView.complete();
             }
         });
 

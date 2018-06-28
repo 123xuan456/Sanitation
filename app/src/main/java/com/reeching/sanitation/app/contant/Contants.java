@@ -65,10 +65,10 @@ public class Contants {
     public static final int ML_ASSESS= -7;//考核情况
 
     //主链接
-    public static final String SERVIECE_CLIENT = "http://192.168.2.25:8088/envir/f";
-    public static final String SERVIECE = "http://192.168.2.25:8088";
-//    public static final String SERVIECE_CLIENT = "http://www.reeching.com:8088/envir/f";
-//    public static final String SERVIECE = "http://www.reeching.com:8088";
+//    public static final String SERVIECE_CLIENT = "http://192.168.2.25:8088/envir/f";
+//    public static final String SERVIECE = "http://192.168.2.25:8088";
+    public static final String SERVIECE_CLIENT = "http://www.reeching.com:8088/envir/f";
+    public static final String SERVIECE = "http://www.reeching.com:8088";
     //登录
     public static final String LOGIN = SERVIECE_CLIENT+"/mobile/login";
     //获取公厕信息列表
@@ -87,7 +87,7 @@ public class Contants {
     public static final String WILLSUBMITTEDTOILET=SERVIECE_CLIENT+"/mobile/willSubmittedToilet";
     //保存公厕信息
     public static final String SAVETOILET=SERVIECE_CLIENT+"/mobile/saveToilet";
-    //保存垃圾篓信息
+    //保存垃圾楼信息
     public static final String SAVERUBBISH=SERVIECE_CLIENT+"/mobile/saveRubbish";
     //保存道路信息
     public static final String SAVESTREET=SERVIECE_CLIENT+"/mobile/saveStreet";
@@ -105,9 +105,9 @@ public class Contants {
     public static final String CHECKMARKNOTOILET=SERVIECE_CLIENT+"/mobile/checkMarkNoToilet";
     //验证公厕编号是否重复
     public static final String CHECKNUMBERTOILET=SERVIECE_CLIENT+"/mobile/checkNumberToilet";
-    //验证垃圾篓标号是否重复
+    //验证垃圾楼标号是否重复
     public static final String CHECKMARKNORUBBISH=SERVIECE_CLIENT+"/mobile/checkMarkNoRubbish";
-    //验证垃圾篓编号是否重复
+    //验证垃圾楼编号是否重复
     public static final String CHECKNUMBERRUBBISH=SERVIECE_CLIENT+"/mobile/checkNumberRubbish";
     //验证道路标号是否重复
     public static final String CHECKMARKNOSTREET=SERVIECE_CLIENT+"/mobile/checkMarkNoStreet";
@@ -143,13 +143,13 @@ public class Contants {
     public static final String TREEDATALEADER=SERVIECE_CLIENT+"/mobile/treeDataLeader";
     //删除公厕
     public static final String DELENVIRTOILETT=SERVIECE_CLIENT+"/mobile/delEnvirToiletT";
-    //删除垃圾篓
+    //删除垃圾楼
     public static final String DELRUBBISHT=SERVIECE_CLIENT+"/mobile/delRubbishT";
     //删除道路
     public static final String DELSTREETT=SERVIECE_CLIENT+"/mobile/delStreetT";
     //道路详情
     public static final String STREETDETAIL=SERVIECE_CLIENT+"/mobile/streetDetail";
-    //垃圾篓详情
+    //垃圾楼详情
     public static final String RUBBISHDETAIL=SERVIECE_CLIENT+"/mobile/rubbishDetail";
     //厕所详情
     public static final String TOILETDETAIL=SERVIECE_CLIENT+"/mobile/toiletDetail";

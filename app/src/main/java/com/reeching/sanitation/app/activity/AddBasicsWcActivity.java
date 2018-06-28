@@ -15,6 +15,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.bigkoo.pickerview.TimePickerView;
+import com.jiangyy.easydialog.LoadingDialog;
 import com.luck.picture.lib.PictureSelector;
 import com.luck.picture.lib.config.PictureConfig;
 import com.luck.picture.lib.entity.LocalMedia;
@@ -456,13 +457,13 @@ public class AddBasicsWcActivity extends BaseAddActivity implements AddBasicsVie
     }
 
     @Override
-    public void showError() {
-
+    public void complete() {
+        new LoadingDialog.Builder(this).dismiss();
     }
 
     @Override
-    public void complete() {
-
+    public void start() {
+        new LoadingDialog.Builder(this).setTitle("提交中...").setCanceledOnTouchOutside(false).show();
     }
 
     //判断编号是否可用

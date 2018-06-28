@@ -1,6 +1,7 @@
 package com.reeching.sanitation.app.presenter;
 
 import com.lzy.okgo.OkGo;
+import com.lzy.okgo.cache.CacheMode;
 import com.lzy.okgo.model.Response;
 import com.reeching.sanitation.app.base.RxPresenter;
 import com.reeching.sanitation.app.bean.JsonBean;
@@ -28,10 +29,16 @@ public class DetailsRoadPresenter extends RxPresenter<DetailsRoadContract.View> 
     public void getRoadDetails(String id) {
         OkGo.<RoadDetailBean>post(STREETDETAIL).tag(this)
                 .params("id", id)
+                .cacheMode(CacheMode.FIRST_CACHE_THEN_REQUEST)
                 .execute(new JsonCallback<RoadDetailBean>(RoadDetailBean.class) {
                     @Override
                     public void onSuccess(Response<RoadDetailBean> response) {
                             mView.showRoadDetail(response.body());
+                    }
+                    @Override
+                    public void onCacheSuccess(Response<RoadDetailBean> response) {
+                        super.onCacheSuccess(response);
+                        onSuccess(response);
                     }
                 });
 

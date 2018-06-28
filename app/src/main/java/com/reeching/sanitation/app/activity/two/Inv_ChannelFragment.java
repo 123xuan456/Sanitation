@@ -55,7 +55,7 @@ public class Inv_ChannelFragment extends Fragment implements SwipeRefreshLayout.
     private List<ToiletListBean.InfosBean> mData;
     private ToiletListRecycleAdapter mAdapter;//公厕
     private WillStreetListRecycleAdapter mAdapter1;//道路
-    private WillRubbishListRecycleAdapter mAdapter2;//垃圾篓
+    private WillRubbishListRecycleAdapter mAdapter2;//垃圾楼
     private int pageIndex=1;
 
     public static Fragment newInstance(int i) {
@@ -95,7 +95,7 @@ public class Inv_ChannelFragment extends Fragment implements SwipeRefreshLayout.
         mRecyclerView.setItemAnimator(new DefaultItemAnimator());
         mAdapter = new ToiletListRecycleAdapter(getActivity(),null,true,true);//公厕
         mAdapter1 = new WillStreetListRecycleAdapter(getActivity(),null,true,true);//道路
-        mAdapter2 = new WillRubbishListRecycleAdapter(getActivity(),null,true,true);//垃圾篓
+        mAdapter2 = new WillRubbishListRecycleAdapter(getActivity(),null,true,true);//垃圾楼
         //初始化 开始加载更多的loading View
         mAdapter.setLoadingView(R.layout.load_loading_layout);
         mAdapter1.setLoadingView(R.layout.load_loading_layout);

@@ -11,6 +11,7 @@ import android.widget.RelativeLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import com.jiangyy.easydialog.LoadingDialog;
 import com.reeching.sanitation.R;
 import com.reeching.sanitation.app.adapter.SpinnerWorkCompanyAdapter;
 import com.reeching.sanitation.app.adapter.SpinnersAdapter;
@@ -387,13 +388,13 @@ public class AddRoadActivity extends BaseAddActivity implements AddRoadContract.
     }
 
     @Override
-    public void showError() {
-
+    public void complete() {
+        new LoadingDialog.Builder(this).dismiss();
     }
 
     @Override
-    public void complete() {
-
+    public void start() {
+        new LoadingDialog.Builder(this).setTitle("提交中...").setCanceledOnTouchOutside(false).show();
     }
 
     @Override

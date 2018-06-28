@@ -13,6 +13,7 @@ import android.widget.RelativeLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import com.jiangyy.easydialog.LoadingDialog;
 import com.luck.picture.lib.PictureSelector;
 import com.luck.picture.lib.config.PictureConfig;
 import com.luck.picture.lib.entity.LocalMedia;
@@ -70,7 +71,7 @@ import static com.reeching.sanitation.app.util.FileUtil.delFile;
 import static com.reeching.sanitation.app.util.FileUtil.getPath;
 
 /**
- * 垃圾篓添加
+ * 垃圾楼添加
  */
 public class AddWasteActivity extends BaseAddActivity implements AddWasteContract.View {
 
@@ -468,13 +469,13 @@ public class AddWasteActivity extends BaseAddActivity implements AddWasteContrac
 
 
     @Override
-    public void showError() {
-
+    public void complete() {
+        new LoadingDialog.Builder(this).dismiss();
     }
 
     @Override
-    public void complete() {
-
+    public void start() {
+        new LoadingDialog.Builder(this).setTitle("提交中...").setCanceledOnTouchOutside(false).show();
     }
 
     @Override

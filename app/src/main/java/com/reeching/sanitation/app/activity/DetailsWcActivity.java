@@ -15,7 +15,6 @@ import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.jiangyy.easydialog.InputDialog;
-import com.nostra13.universalimageloader.core.ImageLoader;
 import com.reeching.sanitation.R;
 import com.reeching.sanitation.app.App;
 import com.reeching.sanitation.app.adapter.PaymentdetailsGridAdapter;
@@ -231,6 +230,28 @@ public class DetailsWcActivity extends AppCompatActivity implements DetailsWcCon
         detailsWcPresenter.attachView(this);
         detailsWcPresenter.getWcDetails(id);
         userId = SharedPreferencesUtil.getInstance().getString("userId");
+        addNum.setFocusable(false);
+        addGrade.setFocusable(false);
+        addName.setFocusable(false);
+        addName1.setFocusable(false);
+        addSite.setFocusable(false);
+        addUnit.setFocusable(false);
+        addInspectionSite.setFocusable(false);
+        addMancount.setFocusable(false);
+        addWomancount.setFocusable(false);
+        addCount.setFocusable(false);
+        addCounts.setFocusable(false);
+        add5.setFocusable(false);
+        add6.setFocusable(false);
+        add7.setFocusable(false);
+        add8.setFocusable(false);
+        add9.setFocusable(false);
+        add10.setFocusable(false);
+        add11.setFocusable(false);
+        add12.setFocusable(false);
+        add13.setFocusable(false);
+        add14.setFocusable(false);
+        addNote.setFocusable(false);
     }
 
     @OnClick({R.id.top_finish, R.id.approve, R.id.audit_failure})
@@ -260,12 +281,12 @@ public class DetailsWcActivity extends AppCompatActivity implements DetailsWcCon
     }
 
     @Override
-    public void showError() {
+    public void complete() {
 
     }
 
     @Override
-    public void complete() {
+    public void start() {
 
     }
 
@@ -322,17 +343,7 @@ public class DetailsWcActivity extends AppCompatActivity implements DetailsWcCon
         addNum.setText(infosBean.getNumber());
         addGrade.setText(infosBean.getMarkNo());
         addName.setText(infosBean.getName());
-        addNum.setFocusable(false);
-        addGrade.setFocusable(false);
-        addName.setFocusable(false);
-        addName1.setFocusable(false);
-        addSite.setFocusable(false);
-        addUnit.setFocusable(false);
-        addInspectionSite.setFocusable(false);
-        addMancount.setFocusable(false);
-        addWomancount.setFocusable(false);
-        addCount.setFocusable(false);
-        addCounts.setFocusable(false);
+
         addName1.setText(infosBean.getCheckName());
 //        addGrids.setText(infosBean.getNumber());
         addSite.setText(infosBean.getAreaType());
@@ -349,17 +360,7 @@ public class DetailsWcActivity extends AppCompatActivity implements DetailsWcCon
         addWomancount.setText(infosBean.getFemalePosition());
         addCount.setText(infosBean.getDisabledPosition());
         addCounts.setText(infosBean.getStationTotal());
-        add5.setFocusable(false);
-        add6.setFocusable(false);
-        add7.setFocusable(false);
-        add8.setFocusable(false);
-        add9.setFocusable(false);
-        add10.setFocusable(false);
-        add11.setFocusable(false);
-        add12.setFocusable(false);
-        add13.setFocusable(false);
-        add14.setFocusable(false);
-        addNote.setFocusable(false);
+
 
 
         add5.setText(infosBean.getManagerNumber());
@@ -379,8 +380,7 @@ public class DetailsWcActivity extends AppCompatActivity implements DetailsWcCon
         if (!TextUtils.isEmpty(photoUrl)){
             photoUrl=photoUrl.substring(1,photoUrl.length());
             final String finalAroundPhoto = SERVIECE + photoUrl;
-            ImageLoader.getInstance().displayImage(finalAroundPhoto,
-                    recyclerIv);
+            ImageUtil.displayImage(this,finalAroundPhoto,recyclerIv);
             recyclerIv.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {

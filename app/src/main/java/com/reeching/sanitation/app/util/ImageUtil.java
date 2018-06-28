@@ -1,7 +1,11 @@
 package com.reeching.sanitation.app.util;
 
 import android.content.Context;
+import android.widget.ImageView;
 
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
+import com.bumptech.glide.request.RequestOptions;
 import com.example.pictureview.ImagePagerActivity;
 import com.example.pictureview.PictureConfig;
 import com.reeching.sanitation.R;
@@ -45,4 +49,13 @@ public class ImageUtil {
             LogUtils.i("图片为空");
         }
     }
+
+
+    public static void displayImage(Context context, String path, ImageView imageView) {
+        RequestOptions options = (new RequestOptions()).diskCacheStrategy(DiskCacheStrategy.ALL).placeholder(R.mipmap.placeholder).error(R.mipmap.placeholder);
+        Glide.with(context).asBitmap().load(path).apply(options).thumbnail(0.1F).into(imageView);
+    }
+
+
+
 }

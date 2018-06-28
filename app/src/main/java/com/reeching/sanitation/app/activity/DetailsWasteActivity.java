@@ -15,7 +15,6 @@ import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.jiangyy.easydialog.InputDialog;
-import com.nostra13.universalimageloader.core.ImageLoader;
 import com.reeching.sanitation.R;
 import com.reeching.sanitation.app.App;
 import com.reeching.sanitation.app.adapter.PaymentdetailsGridAdapter;
@@ -40,7 +39,7 @@ import butterknife.OnClick;
 import static com.reeching.sanitation.app.contant.Contants.SERVIECE;
 
 /**
- * 垃圾篓详情
+ * 垃圾楼详情
  */
 public class DetailsWasteActivity extends AppCompatActivity implements DetailsWasteContract.View {
     @Inject
@@ -130,6 +129,7 @@ public class DetailsWasteActivity extends AppCompatActivity implements DetailsWa
     private String userId;
     private String id;
     private PaymentdetailsGridAdapter mGridAdapter;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -141,7 +141,7 @@ public class DetailsWasteActivity extends AppCompatActivity implements DetailsWa
                 .build()
                 .inject(this);
         String roleName = SharedPreferencesUtil.getInstance().getString("roleName");
-        if ("基层角色".equals(roleName)){
+        if ("基层角色".equals(roleName)) {
             details_audit.setVisibility(View.GONE);
             auditStatus.setVisibility(View.GONE);
         }
@@ -150,10 +150,19 @@ public class DetailsWasteActivity extends AppCompatActivity implements DetailsWa
     }
 
     private void initData() {
-        topName.setText("垃圾篓详情");
+        topName.setText("垃圾楼详情");
         detailsWastePresenter.attachView(this);
         detailsWastePresenter.getWasteDetails(id);
         userId = SharedPreferencesUtil.getInstance().getString("userId");
+        addWaste16.setFocusable(false);
+        addWaste20.setFocusable(false);
+        addWaste21.setFocusable(false);
+        addWaste22.setFocusable(false);
+        addWaste23.setFocusable(false);
+        addWaste1.setFocusable(false);
+        addWaste2.setFocusable(false);
+        addWaste3.setFocusable(false);
+        addWaste5.setFocusable(false);
     }
 
     @OnClick({R.id.top_finish, R.id.approve, R.id.audit_failure})
@@ -169,10 +178,10 @@ public class DetailsWasteActivity extends AppCompatActivity implements DetailsWa
                 new InputDialog.Builder(this)
                         .setTitle("请输入审核不通过原因")
                         .setHint("")
-                                        .setLines(5)
-                                        .setPositiveButton("确定", new View.OnClickListener() {
-                                            @Override
-                                            public void onClick(View view) {
+                        .setLines(5)
+                        .setPositiveButton("确定", new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
 //                                Toast.makeText(DetailsWasteActivity.this, view.getTag().toString(), Toast.LENGTH_SHORT).show();
                                 detailsWastePresenter.getAuditFailure(id, userId, view.getTag().toString());
                             }
@@ -182,12 +191,12 @@ public class DetailsWasteActivity extends AppCompatActivity implements DetailsWa
     }
 
     @Override
-    public void showError() {
+    public void complete() {
 
     }
 
     @Override
-    public void complete() {
+    public void start() {
 
     }
 
@@ -195,7 +204,7 @@ public class DetailsWasteActivity extends AppCompatActivity implements DetailsWa
     public void showWasteDetail(WasteDetailBean data) {
         WasteDetailBean.InfosBean infosBean = data.getInfos();
         String statusName = infosBean.getAuditStatusName();
-        if (statusName.equals("审核完成")){
+        if (statusName.equals("审核完成")) {
             details_audit.setVisibility(View.GONE);
             auditStatus.setVisibility(View.GONE);
         }
@@ -232,21 +241,12 @@ public class DetailsWasteActivity extends AppCompatActivity implements DetailsWa
         add_waste15Tv.setText(infosBean.getRubbishName());
         add_waste17Tv.setText(infosBean.getCompanyName());
 
-        addWaste16.setFocusable(false);
-        addWaste20.setFocusable(false);
-        addWaste21.setFocusable(false);
-        addWaste22.setFocusable(false);
-        addWaste23.setFocusable(false);
-        addWaste1.setFocusable(false);
-        addWaste2.setFocusable(false);
-        addWaste3.setFocusable(false);
-        addWaste5.setFocusable(false);
+
         String aroundPhoto = infosBean.getPhotoa();
-        if (!TextUtils.isEmpty(aroundPhoto)){
-            aroundPhoto=aroundPhoto.substring(1,aroundPhoto.length());
-            final String finalAroundPhoto=SERVIECE+aroundPhoto;
-            ImageLoader.getInstance().displayImage(finalAroundPhoto,
-                    recycler_iv);
+        if (!TextUtils.isEmpty(aroundPhoto)) {
+            aroundPhoto = aroundPhoto.substring(1, aroundPhoto.length());
+            final String finalAroundPhoto = SERVIECE + aroundPhoto;
+            ImageUtil.displayImage(this,finalAroundPhoto,recycler_iv);
             recycler_iv.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -263,8 +263,8 @@ public class DetailsWasteActivity extends AppCompatActivity implements DetailsWa
             final ArrayList<String> lists = new ArrayList<String>();
             for (int ii = 1; ii < sourceStrArray.length; ii++) {
                 String str = sourceStrArray[ii];
-                if (!TextUtils.isEmpty(str)){
-                    lists.add(SERVIECE +str);
+                if (!TextUtils.isEmpty(str)) {
+                    lists.add(SERVIECE + str);
                 }
             }
             LogUtils.i(lists.size());
@@ -273,7 +273,7 @@ public class DetailsWasteActivity extends AppCompatActivity implements DetailsWa
             recycler1_iv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                 @Override
                 public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                    ImageUtil.showImage(DetailsWasteActivity.this,lists,position);
+                    ImageUtil.showImage(DetailsWasteActivity.this, lists, position);
                 }
             });
         }

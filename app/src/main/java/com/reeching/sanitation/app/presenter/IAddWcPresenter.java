@@ -4,12 +4,13 @@ import com.lzy.okgo.OkGo;
 import com.lzy.okgo.cache.CacheMode;
 import com.lzy.okgo.model.Response;
 import com.lzy.okgo.request.PostRequest;
-import com.reeching.sanitation.app.contract.AddBasicsViewContract;
+import com.lzy.okgo.request.base.Request;
 import com.reeching.sanitation.app.base.RxPresenter;
 import com.reeching.sanitation.app.bean.AddSpinnerBean;
 import com.reeching.sanitation.app.bean.FindBaseIdBean;
 import com.reeching.sanitation.app.bean.JsonBean;
 import com.reeching.sanitation.app.bean.WorkCompanyBean;
+import com.reeching.sanitation.app.contract.AddBasicsViewContract;
 import com.reeching.sanitation.app.util.JsonCallback;
 import com.reeching.sanitation.app.util.LogUtils;
 
@@ -144,7 +145,6 @@ public class IAddWcPresenter extends RxPresenter<AddBasicsViewContract.View> imp
                     @Override
                     public void onError(Response<AddSpinnerBean> response) {
                         super.onError(response);
-                        mView.showError();
                     }
 
                     @Override
@@ -176,7 +176,6 @@ public class IAddWcPresenter extends RxPresenter<AddBasicsViewContract.View> imp
                     @Override
                     public void onError(Response<AddSpinnerBean> response) {
                         super.onError(response);
-                        mView.showError();
                     }
 
                     @Override
@@ -208,7 +207,6 @@ public class IAddWcPresenter extends RxPresenter<AddBasicsViewContract.View> imp
                     @Override
                     public void onError(Response<AddSpinnerBean> response) {
                         super.onError(response);
-                        mView.showError();
                     }
 
                     @Override
@@ -240,7 +238,6 @@ public class IAddWcPresenter extends RxPresenter<AddBasicsViewContract.View> imp
                     @Override
                     public void onError(Response<AddSpinnerBean> response) {
                         super.onError(response);
-                        mView.showError();
                     }
 
                     @Override
@@ -272,7 +269,6 @@ public class IAddWcPresenter extends RxPresenter<AddBasicsViewContract.View> imp
                     @Override
                     public void onError(Response<AddSpinnerBean> response) {
                         super.onError(response);
-                        mView.showError();
                     }
 
                     @Override
@@ -304,7 +300,6 @@ public class IAddWcPresenter extends RxPresenter<AddBasicsViewContract.View> imp
                     @Override
                     public void onError(Response<AddSpinnerBean> response) {
                         super.onError(response);
-                        mView.showError();
                     }
 
                     @Override
@@ -336,7 +331,6 @@ public class IAddWcPresenter extends RxPresenter<AddBasicsViewContract.View> imp
                     @Override
                     public void onError(Response<AddSpinnerBean> response) {
                         super.onError(response);
-                        mView.showError();
                     }
 
                     @Override
@@ -368,7 +362,6 @@ public class IAddWcPresenter extends RxPresenter<AddBasicsViewContract.View> imp
                     @Override
                     public void onError(Response<AddSpinnerBean> response) {
                         super.onError(response);
-                        mView.showError();
                     }
 
                     @Override
@@ -429,10 +422,16 @@ public class IAddWcPresenter extends RxPresenter<AddBasicsViewContract.View> imp
         }
         a.execute(new JsonCallback<JsonBean>(JsonBean.class) {
             @Override
+            public void onStart(Request<JsonBean, ? extends Request> request) {
+                super.onStart(request);
+                mView.start();
+
+            }
+
+            @Override
             public void onSuccess(Response<JsonBean> response) {
                 JsonBean jsonBean = response.body();
                 mView.showSaveMessage(jsonBean.getResult());
-
             }
 
             @Override
@@ -440,6 +439,12 @@ public class IAddWcPresenter extends RxPresenter<AddBasicsViewContract.View> imp
                 super.onError(response);
                 LogUtils.i(response.code());
                 LogUtils.i(response.message());
+            }
+
+            @Override
+            public void onFinish() {
+                super.onFinish();
+                mView.complete();
             }
         });
 //

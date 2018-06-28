@@ -129,7 +129,7 @@ public class CaseDetailBean implements Serializable {
         private String caseSource;
         private String baseId;
         private String caseDesc;
-        private long taskdisposalDemandDeadline;
+        private String taskdisposalDemandDeadline;
         private String workTypeName;
         private String caseStateName;
         private String companyName1;
@@ -443,11 +443,11 @@ public class CaseDetailBean implements Serializable {
             this.caseDesc = caseDesc;
         }
 
-        public long getTaskdisposalDemandDeadline() {
+        public String getTaskdisposalDemandDeadline() {
             return taskdisposalDemandDeadline;
         }
 
-        public void setTaskdisposalDemandDeadline(long taskdisposalDemandDeadline) {
+        public void setTaskdisposalDemandDeadline(String taskdisposalDemandDeadline) {
             this.taskdisposalDemandDeadline = taskdisposalDemandDeadline;
         }
 

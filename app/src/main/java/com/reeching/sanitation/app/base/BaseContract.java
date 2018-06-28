@@ -14,10 +14,10 @@ public interface BaseContract {
     }
 
     interface BaseView {
-
-        void showError();
-
+        //完成
         void complete();
+
+        void start();
 
     }
 }
